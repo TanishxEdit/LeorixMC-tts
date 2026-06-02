@@ -77,10 +77,10 @@ def set_user(guild_id: int, user_id: int, **kwargs):
 
 # ── Bot Setup ─────────────────────────────────────────────────────────────────
 intents = discord.Intents.default()
-intents.message_content = True
+intents.message_content = False
 intents.voice_states     = True
 intents.guilds           = True
-intents.members          = True
+intents.members          = False
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 tree = bot.tree
